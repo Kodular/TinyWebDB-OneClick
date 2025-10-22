@@ -22,7 +22,7 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@tinywebdb/core": "*"
+    "@tinywebdb/core": "^1.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",

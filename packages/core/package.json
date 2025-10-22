@@ -5,6 +5,14 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kodular/TinyWebDB-OneClick.git",
+    "directory": "packages/core"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "tsx watch src/dev.ts",
