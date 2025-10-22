@@ -2,7 +2,7 @@
  * Cloudflare Workers entry point for TinyWebDB with KV storage
  */
 
-import { Application, HttpRequest } from '@kodular/tinywebdb-core';
+import { Application, HttpRequest } from 'tinywebdb-core';
 import { CloudflareKVStorage } from './CloudflareKVStorage';
 
 /**

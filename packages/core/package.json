@@ -1,12 +1,12 @@
 {
-  "name": "@kodular/tinywebdb-core",
+  "name": "tinywebdb-core",
   "version": "0.0.1",
   "description": "Cloud-agnostic TinyWebDB core implementation",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "repository": {
     "type": "git",
