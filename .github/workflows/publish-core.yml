@@ -22,15 +22,15 @@ jobs:
         with:
           node-version: '24'
           registry-url: 'https://npm.pkg.github.com'
-          scope: '@tinywebdb'
+          scope: '@kodular'
 
       - name: Install dependencies
         run: npm ci
 
       - name: Build core package
-        run: npm run build -w @tinywebdb/core
+        run: npm run build -w @kodular/tinywebdb-core
 
       - name: Publish to GitHub Packages
-        run: npm publish -w @tinywebdb/core
+        run: npm publish -w @kodular/tinywebdb-core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

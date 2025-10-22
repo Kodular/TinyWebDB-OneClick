@@ -1,6 +1,6 @@
 {
-  "name": "@tinywebdb/cloudflare-kv",
-  "version": "1.0.0",
+  "name": "@kodular/tinywebdb-cloudflare-kv",
+  "version": "0.0.1",
   "description": "TinyWebDB deployment for Cloudflare Workers with KV storage",
   "main": "dist/index.js",
   "type": "module",
@@ -22,7 +22,7 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "@tinywebdb/core": "^1.0.0"
+    "@kodular/tinywebdb-core": "^0.0.1"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",
