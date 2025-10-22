@@ -10,10 +10,10 @@
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test --workspaces --if-present",
     "typecheck": "npm run typecheck --workspaces --if-present",
-    "dev:core": "npm run dev -w @tinywebdb/core",
-    "deploy:cloudflare-kv": "npm run deploy -w @tinywebdb/cloudflare-kv",
-    "deploy:cloudflare-d1": "npm run deploy -w @tinywebdb/cloudflare-d1",
-    "deploy:cloudflare-r2": "npm run deploy -w @tinywebdb/cloudflare-r2"
+    "dev:core": "npm run dev -w tinywebdb-core",
+    "deploy:cloudflare-kv": "npm run deploy -w tinywebdb-cloudflare-kv",
+    "deploy:cloudflare-d1": "npm run deploy -w tinywebdb-cloudflare-d1",
+    "deploy:cloudflare-r2": "npm run deploy -w tinywebdb-cloudflare-r2"
   },
   "keywords": [
     "tinywebdb",

@@ -3,13 +3,13 @@
 
 name = "tinywebdb-d1"
 main = "src/index.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-10-22"
 
 # D1 Database binding
-# When using deploy buttons, D1 database will be created automatically
-# For manual deployment:
-#   1. wrangler d1 create tinywebdb-d1
-#   2. Update wrangler.toml with database_id
-#   3. wrangler d1 execute tinywebdb-d1 --file=./src/schema.sql
+# Create database: wrangler d1 create tinywebdb-d1
+# Then replace YOUR_D1_DATABASE_ID below with the database_id from the output
+# Initialize schema: wrangler d1 execute tinywebdb-d1 --file=./src/schema.sql
 [[d1_databases]]
 binding = "TINYWEBDB_D1"
+database_name = "tinywebdb-d1"
+database_id = "YOUR_D1_DATABASE_ID"

@@ -3,12 +3,10 @@
 
 name = "tinywebdb-r2"
 main = "src/index.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-10-22"
 
 # R2 Bucket binding
-# When using deploy buttons, R2 bucket will be created automatically
-# For manual deployment:
-#   1. wrangler r2 bucket create tinywebdb-r2
-#   2. Update wrangler.toml with bucket_name
+# Create bucket: wrangler r2 bucket create tinywebdb-r2
 [[r2_buckets]]
 binding = "TINYWEBDB_R2"
+bucket_name = "YOUR_R2_BUCKET_NAME"

@@ -3,10 +3,11 @@
 
 name = "tinywebdb-kv"
 main = "src/index.ts"
-compatibility_date = "2024-01-01"
+compatibility_date = "2025-10-22"
 
 # KV Namespace binding
-# When using deploy buttons, KV namespace will be created automatically
-# For manual deployment: wrangler kv:namespace create TINYWEBDB_KV
+# Create namespace: wrangler kv:namespace create TINYWEBDB_KV
+# Then replace YOUR_KV_NAMESPACE_ID below with the ID from the output
 [[kv_namespaces]]
 binding = "TINYWEBDB_KV"
+id = "YOUR_KV_NAMESPACE_ID"
