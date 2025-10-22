@@ -1,0 +1,12 @@
+# Cloudflare Workers configuration for TinyWebDB with KV
+# See: https://developers.cloudflare.com/workers/wrangler/configuration/
+
+name = "tinywebdb-kv"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+# KV Namespace binding
+# When using deploy buttons, KV namespace will be created automatically
+# For manual deployment: wrangler kv:namespace create TINYWEBDB_KV
+[[kv_namespaces]]
+binding = "TINYWEBDB_KV"

@@ -1,0 +1,33 @@
+{
+  "name": "@tinywebdb/cloudflare-r2",
+  "version": "1.0.0",
+  "description": "TinyWebDB deployment for Cloudflare Workers with R2 (Object Storage)",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "tinywebdb",
+    "cloudflare",
+    "workers",
+    "r2",
+    "object-storage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@tinywebdb/core": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.100.0"
+  }
+}

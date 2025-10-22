@@ -1,0 +1,34 @@
+{
+  "name": "tinywebdb-oneclick-monorepo",
+  "version": "1.0.0",
+  "description": "TinyWebDB with one-click deployments to multiple cloud providers",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:core": "npm run dev -w @tinywebdb/core",
+    "deploy:cloudflare-kv": "npm run deploy -w @tinywebdb/cloudflare-kv",
+    "deploy:cloudflare-d1": "npm run deploy -w @tinywebdb/cloudflare-d1",
+    "deploy:cloudflare-r2": "npm run deploy -w @tinywebdb/cloudflare-r2"
+  },
+  "keywords": [
+    "tinywebdb",
+    "app-inventor",
+    "cloudflare",
+    "vercel",
+    "serverless"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  }
+}

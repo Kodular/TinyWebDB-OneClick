@@ -1,0 +1,36 @@
+{
+  "name": "@tinywebdb/cloudflare-d1",
+  "version": "1.0.0",
+  "description": "TinyWebDB deployment for Cloudflare Workers with D1 (SQLite) storage",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "typecheck": "tsc --noEmit",
+    "db:create": "wrangler d1 create tinywebdb",
+    "db:init": "wrangler d1 execute tinywebdb --file=./src/schema.sql",
+    "db:init:local": "wrangler d1 execute tinywebdb --local --file=./src/schema.sql"
+  },
+  "keywords": [
+    "tinywebdb",
+    "cloudflare",
+    "workers",
+    "d1",
+    "sqlite"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@tinywebdb/core": "*"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.2",
+    "wrangler": "^3.100.0"
+  }
+}
