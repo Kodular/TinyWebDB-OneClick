@@ -13,30 +13,39 @@ the cloud.
 
 ## Quick Start
 
-### 1. Install Dependencies
+Pick the hosting and storage option that best fits your needs:
 
-```bash
-npm install
-npm run build
-```
+| Hosting               | Database            | Deploy                                                                                                                                                                                                                                                                                                                             |
+|-----------------------|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Cloudflare Workers    | KV (Key-Value)      | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-kv)                                                                                                                                               |
+| Cloudflare Workers    | D1 (SQLite)         | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-d1)                                                                                                                                               |
+| Cloudflare Workers    | R2 (Object Storage) | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-r2)                                                                                                                                               |
+| Vercel Edge Functions | KV (Redis)          | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-kv&project-name=tinywebdb-vercel-kv&repository-name=tinywebdb-vercel-kv&stores=%5B%7B%22type%22%3A%22kv%22%7D%5D)                         |
+| Vercel Edge Functions | Postgres            | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-postgres&project-name=tinywebdb-vercel-postgres&repository-name=tinywebdb-vercel-postgres&stores=%5B%7B%22type%22%3A%22postgres%22%7D%5D) |
+| Vercel Edge Functions | Blob Storage        | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-blob&project-name=tinywebdb-vercel-blob&repository-name=tinywebdb-vercel-blob&stores=%5B%7B%22type%22%3A%22blob%22%7D%5D)                 |
 
-### 2. Choose Your Deployment
+### Database Comparison
 
-Pick the storage option that best fits your needs:
+Note that Vercel does not "natively" offer a database option. Instead, different providers are offered in a marketplace.
+Still, 1-click deployment, but specific limits may vary from one option within the same "database type" to another.
 
-## Storage Comparison
-
-| Storage | Read Latency | Consistency | Max Value Size | Free Tier      | Best For               | Deploy |
-|---------|--------------|-------------|----------------|----------------|------------------------|--------|
-| **KV**  | <1ms         | Eventual    | 25 MB          | 100K reads/day | Fast, simple key-value | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-kv) |
-| **D1**  | ~5ms         | Strong      | ~1 GB          | 5M reads/day   | Strong consistency     | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-d1) |
-| **R2**  | ~10ms        | Strong      | Unlimited      | 10 GB storage  | Large values           | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-r2) |
+| Database            | Type           | Read Latency | Consistency | Max Value Size | Free Tier      |
+|---------------------|----------------|--------------|-------------|----------------|----------------|
+| **Cloudflare KV**   | Key-Value      | <1ms         | Eventual    | 25 MB          | 100K reads/day |
+| **Cloudflare D1**   | SQLite         | ~5ms         | Strong      | ~1 GB          | 5M reads/day   |
+| **Cloudflare R2**   | Object Storage | ~10ms        | Strong      | Unlimited      | 10 GB storage  |
+| **Vercel KV**       | Redis          | <1ms         | Eventual    | _Depends_      | _Depends_      |
+| **Vercel Postgres** | PostgreSQL     | ~5ms         | Strong      | _Depends_      | _Depends_      |
+| **Vercel Blob**     | Object Storage | ~10ms        | Strong      | 500 MB/blob    | 100 MB storage |
 
 **Detailed setup guides:**
 
-- [KV Setup Guide](packages/cloudflare-kv/README.md)
-- [D1 Setup Guide](packages/cloudflare-d1/README.md)
-- [R2 Setup Guide](packages/cloudflare-r2/README.md)
+- [Cloudflare KV Setup Guide](packages/cloudflare-kv/README.md)
+- [Cloudflare D1 Setup Guide](packages/cloudflare-d1/README.md)
+- [Cloudflare R2 Setup Guide](packages/cloudflare-r2/README.md)
+- [Vercel KV Setup Guide](packages/vercel-kv/README.md)
+- [Vercel Postgres Setup Guide](packages/vercel-postgres/README.md)
+- [Vercel Blob Setup Guide](packages/vercel-blob/README.md)
 
 ## Contributing
 

@@ -13,7 +13,10 @@
     "dev:core": "npm run dev -w tinywebdb-core",
     "deploy:cloudflare-kv": "npm run deploy -w tinywebdb-cloudflare-kv",
     "deploy:cloudflare-d1": "npm run deploy -w tinywebdb-cloudflare-d1",
-    "deploy:cloudflare-r2": "npm run deploy -w tinywebdb-cloudflare-r2"
+    "deploy:cloudflare-r2": "npm run deploy -w tinywebdb-cloudflare-r2",
+    "deploy:vercel-kv": "npm run deploy -w tinywebdb-vercel-kv",
+    "deploy:vercel-postgres": "npm run deploy -w tinywebdb-vercel-postgres",
+    "deploy:vercel-blob": "npm run deploy -w tinywebdb-vercel-blob"
   },
   "keywords": [
     "tinywebdb",

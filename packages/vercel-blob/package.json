@@ -1,0 +1,33 @@
+{
+  "name": "tinywebdb-vercel-blob",
+  "version": "0.0.1",
+  "description": "TinyWebDB deployment for Vercel Edge Functions with Blob storage",
+  "main": "api/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "vercel --prod",
+    "dev": "vercel dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "tinywebdb",
+    "vercel",
+    "edge-functions",
+    "blob",
+    "storage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.0.0",
+    "tinywebdb-core": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vercel": "^48.5.0"
+  }
+}

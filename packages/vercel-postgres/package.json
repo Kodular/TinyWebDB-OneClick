@@ -1,0 +1,33 @@
+{
+  "name": "tinywebdb-vercel-postgres",
+  "version": "0.0.1",
+  "description": "TinyWebDB deployment for Vercel Edge Functions with Postgres storage",
+  "main": "api/index.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "vercel --prod",
+    "dev": "vercel dev",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "tinywebdb",
+    "vercel",
+    "edge-functions",
+    "postgres",
+    "sql"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.10.0",
+    "tinywebdb-core": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vercel": "^48.5.0"
+  }
+}
