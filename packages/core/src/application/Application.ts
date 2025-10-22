@@ -37,6 +37,10 @@ export class Application {
     const path = this.normalizePath(request.path);
 
     switch (path) {
+      case '':
+      case '/':
+        return this.welcomeResponse();
+
       case '/storeavalue':
         return await this.storeHandler.handle(request);
 
@@ -54,6 +58,25 @@ export class Application {
   private normalizePath(path: string): string {
     // Remove trailing slash and convert to lowercase
     return path.toLowerCase().replace(/\/$/, '');
+  }
+
+  private welcomeResponse(): HttpResponse {
+    return {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        service: 'TinyWebDB',
+        version: '1.0',
+        endpoints: {
+          '/storeavalue': 'POST - Store a tag-value pair',
+          '/getvalue': 'POST - Get a value by tag',
+          '/deleteentry': 'POST - Delete an entry by tag',
+        },
+        documentation: 'https://ai2.appinventor.mit.edu/reference/other/tinywebdb.html',
+      }),
+    };
   }
 
   private notFoundResponse(): HttpResponse {
