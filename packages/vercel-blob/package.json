@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vercel/blob": "^2.0.0",
-    "@kodular/tinywebdb-core": "^0.1.0"
+    "@kodular/tinywebdb-core": "^0.1.2"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
