@@ -5,8 +5,8 @@
     "lib": ["ES2022"],
 
     /* Modules */
-    "module": "ES2022",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "resolveJsonModule": true,
 
     /* Emit */
