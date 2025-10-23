@@ -2,7 +2,7 @@
  * Vercel Edge Function entry point for TinyWebDB with Blob storage
  */
 
-import { Application, HttpRequest } from 'tinywebdb-core';
+import { Application, HttpRequest } from '@kodular/tinywebdb-core';
 import { VercelBlobStorage } from '../src/VercelBlobStorage';
 
 /**

@@ -1,4 +1,4 @@
-import { StoragePort, StoredData } from 'tinywebdb-core';
+import { StoragePort, StoredData } from '@kodular/tinywebdb-core';
 import { put, del, head, list } from '@vercel/blob';
 
 /**

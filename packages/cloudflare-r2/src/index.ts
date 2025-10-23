@@ -2,7 +2,7 @@
  * Cloudflare Workers entry point for TinyWebDB with R2 storage
  */
 
-import { Application, HttpRequest } from 'tinywebdb-core';
+import { Application, HttpRequest } from '@kodular/tinywebdb-core';
 import { CloudflareR2Storage } from './CloudflareR2Storage';
 
 /**

@@ -1,4 +1,4 @@
-import { StoragePort, StoredData } from 'tinywebdb-core';
+import { StoragePort, StoredData } from '@kodular/tinywebdb-core';
 
 /**
  * Cloudflare D1 Storage Adapter

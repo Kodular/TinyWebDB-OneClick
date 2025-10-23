@@ -2,7 +2,7 @@
  * Vercel Edge Function entry point for TinyWebDB with KV storage
  */
 
-import { Application, HttpRequest } from 'tinywebdb-core';
+import { Application, HttpRequest } from '@kodular/tinywebdb-core';
 import { kv } from '@vercel/kv';
 import { VercelKVStorage } from '../src/VercelKVStorage';
 

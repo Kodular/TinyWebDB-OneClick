@@ -1,5 +1,5 @@
 {
-  "name": "tinywebdb-vercel-kv",
+  "name": "@kodular/tinywebdb-vercel-kv",
   "version": "0.0.1",
   "description": "TinyWebDB deployment for Vercel Edge Functions with KV storage",
   "main": "api/index.ts",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",
-    "tinywebdb-core": "^0.0.1"
+    "@kodular/tinywebdb-core": "^0.0.3"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

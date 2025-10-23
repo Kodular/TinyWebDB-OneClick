@@ -1,5 +1,5 @@
 {
-  "name": "tinywebdb-cloudflare-d1",
+  "name": "@kodular/tinywebdb-cloudflare-d1",
   "version": "0.0.1",
   "description": "TinyWebDB deployment for Cloudflare Workers with D1 (SQLite) storage",
   "main": "dist/index.js",
@@ -26,7 +26,7 @@
     "node": ">=24.0.0"
   },
   "dependencies": {
-    "tinywebdb-core": "^0.0.1"
+    "@kodular/tinywebdb-core": "^0.0.3"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241230.0",

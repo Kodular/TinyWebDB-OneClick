@@ -1,5 +1,5 @@
 {
-  "name": "tinywebdb-vercel-postgres",
+  "name": "@kodular/tinywebdb-vercel-postgres",
   "version": "0.0.1",
   "description": "TinyWebDB deployment for Vercel Edge Functions with Postgres storage",
   "main": "api/index.ts",
@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@vercel/postgres": "^0.10.0",
-    "tinywebdb-core": "^0.0.1"
+    "@kodular/tinywebdb-core": "^0.0.3"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
