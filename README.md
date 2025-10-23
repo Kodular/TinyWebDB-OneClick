@@ -22,12 +22,14 @@ Pick the hosting and storage option that best fits your needs:
 | Cloudflare Workers    | R2 (Object Storage) | [![Deploy](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/Kodular/TinyWebDB-OneClick/tree/main/packages/cloudflare-r2)                                                                                                                                               |
 | Vercel Edge Functions | KV (Redis)          | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-kv&project-name=tinywebdb-vercel-kv&repository-name=tinywebdb-vercel-kv&stores=%5B%7B%22type%22%3A%22kv%22%7D%5D)                         |
 | Vercel Edge Functions | Postgres            | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-postgres&project-name=tinywebdb-vercel-postgres&repository-name=tinywebdb-vercel-postgres&stores=%5B%7B%22type%22%3A%22postgres%22%7D%5D) |
-| Vercel Edge Functions | Blob Storage        | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-blob&project-name=tinywebdb-vercel-blob&repository-name=tinywebdb-vercel-blob&stores=%5B%7B%22type%22%3A%22blob%22%7D%5D)                 |
+| Vercel Functions      | Blob Storage        | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-blob&project-name=tinywebdb-vercel-blob&repository-name=tinywebdb-vercel-blob&stores=%5B%7B%22type%22%3A%22blob%22%7D%5D)                 |
 
 ### Database Comparison
 
-Note that Vercel does not "natively" offer a database option. Instead, different providers are offered in a marketplace.
-Still, 1-click deployment, but specific limits may vary from one option within the same "database type" to another.
+Note that Vercel does not "natively" offer a database option (except for the Blob storage). Instead, different
+providers are offered in a marketplace.  
+Still, 1-click deployments, but specific limits may vary from one option within the same "database type" to another
+depending on the provider.
 
 | Database            | Type           | Read Latency | Consistency | Max Value Size | Free Tier      |
 |---------------------|----------------|--------------|-------------|----------------|----------------|

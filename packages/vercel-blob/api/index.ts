@@ -1,5 +1,6 @@
 /**
- * Vercel Edge Function entry point for TinyWebDB with Blob storage
+ * Vercel Function entry point for TinyWebDB with Blob storage
+ * Uses Node.js Runtime (required for @vercel/blob compatibility)
  */
 
 import { Application, HttpRequest } from '@kodular/tinywebdb-core';
@@ -52,7 +53,11 @@ function toVercelResponse(
 }
 
 /**
- * Vercel Edge Function handler
+ * Vercel Function handler (Node.js Runtime)
+ *
+ * Note: @vercel/blob requires Node.js runtime and is not compatible with Edge runtime.
+ * The Edge runtime doesn't support the Node.js built-in modules (stream, net, http, etc.)
+ * that @vercel/blob depends on.
  */
 export default async function handler(request: Request): Promise<Response> {
   try {
@@ -69,7 +74,7 @@ export default async function handler(request: Request): Promise<Response> {
     // Convert response format
     return toVercelResponse(httpResponse);
   } catch (error) {
-    console.error('Edge function error:', error);
+    console.error('Function error:', error);
     return new Response(
       JSON.stringify({
         error: 'Internal Server Error',
@@ -82,10 +87,3 @@ export default async function handler(request: Request): Promise<Response> {
     );
   }
 }
-
-/**
- * Configure this function to run on the Edge runtime
- */
-export const config = {
-  runtime: 'edge',
-};

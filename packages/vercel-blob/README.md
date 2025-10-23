@@ -1,13 +1,13 @@
 # @tinywebdb/vercel-blob
 
-TinyWebDB deployment for Vercel Edge Functions with Blob storage.
+TinyWebDB deployment for Vercel Functions (Node.js Runtime) with Blob storage.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-blob&project-name=tinywebdb-vercel-blob&repository-name=tinywebdb-vercel-blob&stores=%5B%7B%22type%22%3A%22blob%22%7D%5D)
 
 ## Features
 
-- **Global edge deployment**: Runs on Vercel's Edge Network
-- **Unlimited storage**: No size limits for individual values
+- **Node.js Runtime**: Uses Vercel's Node.js runtime (required for @vercel/blob)
+- **Unlimited storage**: No size limits for individual values (up to 500 MB per blob)
 - **CDN distribution**: Automatic global content delivery
 - **Cost-effective**: Pay only for what you use
 
