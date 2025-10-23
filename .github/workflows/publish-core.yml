@@ -9,6 +9,7 @@ on:
       - '.github/workflows/publish-core.yml'
 
 permissions:
+  id-token: write
   contents: read
 
 jobs:
@@ -30,5 +31,3 @@ jobs:
 
       - name: Publish to npm
         run: npm publish -w @kodular/tinywebdb-core
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,6 +1,6 @@
 {
   "name": "@kodular/tinywebdb-core",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Cloud-agnostic TinyWebDB core implementation",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
