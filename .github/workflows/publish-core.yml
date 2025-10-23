@@ -26,9 +26,9 @@ jobs:
         run: npm ci
 
       - name: Build core package
-        run: npm run build -w tinywebdb-core
+        run: npm run build -w @kodular/tinywebdb-core
 
       - name: Publish to npm
-        run: npm publish -w tinywebdb-core
+        run: npm publish -w @kodular/tinywebdb-core
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
