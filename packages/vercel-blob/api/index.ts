@@ -10,7 +10,11 @@ import { VercelBlobStorage } from '../src/VercelBlobStorage.js';
  * Converts Vercel Request to our cloud-agnostic HttpRequest
  */
 async function toHttpRequest(request: Request): Promise<HttpRequest> {
-  const url = new URL(request.url);
+  // Handle both full URLs and relative paths
+  const requestUrl = request.url.startsWith('http')
+    ? request.url
+    : `https://dummy.local${request.url}`;
+  const url = new URL(requestUrl);
   let body: Record<string, unknown> = {};
 
   if (request.method === 'POST') {
