@@ -20,11 +20,11 @@
   "author": "",
   "license": "MIT",
   "engines": {
-    "node": ">=24.0.0"
+    "node": "22.x"
   },
   "dependencies": {
     "@vercel/kv": "^3.0.0",
-    "@kodular/tinywebdb-core": "^0.0.3"
+    "@kodular/tinywebdb-core": "^0.1.0"
   },
   "devDependencies": {
     "typescript": "^5.7.2",
