@@ -4,7 +4,7 @@
  */
 
 import { Application, HttpRequest } from '@kodular/tinywebdb-core';
-import { VercelBlobStorage } from '../src/VercelBlobStorage';
+import { VercelBlobStorage } from '../src/VercelBlobStorage.js';
 
 /**
  * Converts Vercel Request to our cloud-agnostic HttpRequest
