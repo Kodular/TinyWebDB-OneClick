@@ -57,37 +57,39 @@ function toVercelResponse(
 }
 
 /**
- * Vercel Function handler (Node.js Runtime)
+ * Vercel Node.js Function handler (Web Standard format)
  *
  * Note: @vercel/blob requires Node.js runtime and is not compatible with Edge runtime.
  * The Edge runtime doesn't support the Node.js built-in modules (stream, net, http, etc.)
  * that @vercel/blob depends on.
  */
-export default async function handler(request: Request): Promise<Response> {
-  try {
-    // Initialize storage and application
-    const storage = new VercelBlobStorage();
-    const app = new Application(storage);
+export default {
+  async fetch(request: Request): Promise<Response> {
+    try {
+      // Initialize storage and application
+      const storage = new VercelBlobStorage();
+      const app = new Application(storage);
 
-    // Convert request format
-    const httpRequest = await toHttpRequest(request);
+      // Convert request format
+      const httpRequest = await toHttpRequest(request);
 
-    // Handle request
-    const httpResponse = await app.handleRequest(httpRequest);
+      // Handle request
+      const httpResponse = await app.handleRequest(httpRequest);
 
-    // Convert response format
-    return toVercelResponse(httpResponse);
-  } catch (error) {
-    console.error('Function error:', error);
-    return new Response(
-      JSON.stringify({
-        error: 'Internal Server Error',
-        message: error instanceof Error ? error.message : 'Unknown error',
-      }),
-      {
-        status: 500,
-        headers: { 'Content-Type': 'application/json' },
-      }
-    );
-  }
-}
+      // Convert response format
+      return toVercelResponse(httpResponse);
+    } catch (error) {
+      console.error('Function error:', error);
+      return new Response(
+        JSON.stringify({
+          error: 'Internal Server Error',
+          message: error instanceof Error ? error.message : 'Unknown error',
+        }),
+        {
+          status: 500,
+          headers: { 'Content-Type': 'application/json' },
+        }
+      );
+    }
+  },
+};
