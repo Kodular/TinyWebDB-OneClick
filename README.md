@@ -24,6 +24,16 @@ Pick the hosting and storage option that best fits your needs:
 | Vercel Edge Functions | Postgres            | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-postgres&project-name=tinywebdb-vercel-postgres&repository-name=tinywebdb-vercel-postgres&stores=%5B%7B%22type%22%3A%22postgres%22%7D%5D) |
 | Vercel Functions      | Blob Storage        | [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FKodular%2FTinyWebDB-OneClick%2Ftree%2Fmain%2Fpackages%2Fvercel-blob&project-name=tinywebdb-vercel-blob&repository-name=tinywebdb-vercel-blob&stores=%5B%7B%22type%22%3A%22blob%22%7D%5D)                 |
 
+Once deployed, make sure you update the `ServiceURL` property in your TinyWebDB component with the deployed URL. Some
+common URL patterns for the providers above are:
+
+* Cloudflare: `https://project-name.account-name.workers.dev`
+* Vercel: `https://project-name-blob3.vercel.app`
+
+_When setting the `ServiceURL`, make sure it starts with `https://` and does NOT end with `/`._
+
+![](https://i.imgur.com/lAq9V8E.png)![](https://i.imgur.com/cRWASIC.png)
+
 ### Database Comparison
 
 Note that Vercel does not "natively" offer a database option (except for the Blob storage). Instead, different
